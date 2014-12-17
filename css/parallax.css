@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  @font-face {
+    font-family: 'msyi';
+    src: url('fonts/msyi.ttf'); 
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  font-family: 'msyi';
+}
+
+nav {
+  font-size: 20px;
+  margin: 0;
+  background: black;
+  width: 100%;
+  color: white;
+  height: 3rem;
+}
+
+ul {
+  margin: 0;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  height: 600px;
+}
+
+
+section.parallax article{
+  height: 300px !important;
+}
+
+section.parallax {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.parallax h1 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+section.parallax article {
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+}
+
+section div.container {
+  display: inline-block;
+  margin-right: auto;
+}
+
+
+
+
+section.parallax.parallax_1 {
+
+}
+section.parallax.parallax_2 {
+
+}
+section.parallax.parallax_3 {
+  background-image: url("../images/bg_scroll_3.jpg");
+}
+section.parallax.parallax_4 {
+  background-image: url("../images/bg_scroll_4.jpg");
+}
