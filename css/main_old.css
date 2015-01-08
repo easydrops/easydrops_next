@@ -94,7 +94,7 @@ section.parallax article {
   font-size: 16px;
   text-align: center;
   display: block;
-  padding: 0 2rem;
+  padding-right: 2rem;
 }
 
 @media only screen and (max-width: 40em) {
@@ -114,36 +114,28 @@ section.parallax article {
   }
 
 }
-
 @media only screen and (min-width: 40.063em) {
   .logo {
     max-width: 5%;
     min-width: 30px;
+    display: block;
     padding: 2rem;
+    float: left;
   }
   .heart {
+    padding-left: 4rem;
     max-width: 100px;
   }
 }
 
-.set {
-  width: 100%;
-  text-align: center;
+@media only screen and (min-width: 64.063em) {
+  section.parallax article {
+    padding-right: 5rem;
+  }
+  .logo {
+    padding: 2rem 2rem 2rem 5rem;
+  }
 }
-
-.image_wrapper {
- max-width: 100% !important;
-} 
-
-.img_set {
-  display: inline-block;
-  width: 30%
-}
-
-.b_img {
-  height: 150px;
-}
-
 
 .invisible_out {
   opacity: 1;

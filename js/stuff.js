@@ -1,7 +1,7 @@
 $(function(){
     var fadeBegin = 200, 
     fadeFinish = 250, 
-    fadingElement = $('.invisible');
+    fadingElement = $('.invisible_out');
 
 $(window).on('scroll', function(){
     var offset = $(document).scrollTop(), opacity = 0; 
@@ -13,9 +13,24 @@ $(window).on('scroll', function(){
 
     }
     fadingElement.stop().animate({opacity: opacity}, 100);
+  });
 });
-    
-    });
+
+$(function(){
+    var fadeBegin = 100, 
+    fadeFinish = 300, 
+    fadingElement = $('.invisible_in');
+
+  $(window).on('scroll', function(){
+    var offset = $(document).scrollTop(), opacity = 1;
+    if( offset <= fadeBegin ){
+        opacity = 0; 
+    } else if( offset <= fadeFinish ){
+        opacity = 0 - offset / fadeFinish;
+    }
+    fadingElement.stop().animate({opacity: opacity}, 100);
+  });
+});
 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
