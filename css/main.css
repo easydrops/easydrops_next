@@ -59,6 +59,8 @@ section.start h1 {
 }
 
 nav {
+  position: fixed;
+  z-index: 2;
   font-size: 20px;
   margin: 0;
   background: black;
