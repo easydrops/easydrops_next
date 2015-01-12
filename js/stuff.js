@@ -1,3 +1,5 @@
+//Fade Out Function
+
 $(function(){
     var fadeBegin = 200, 
     fadeFinish = 250, 
@@ -16,6 +18,8 @@ $(window).on('scroll', function(){
   });
 });
 
+//Fade In Function
+
 $(function(){
     var fadeBegin = 100, 
     fadeFinish = 300, 
@@ -31,6 +35,26 @@ $(function(){
     fadingElement.stop().animate({opacity: opacity}, 100);
   });
 });
+
+//Extra Menu Fade In/Out
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 48) {
+        $('.mini-menu').fadeIn();
+    }
+    else {
+        $('.mini-menu').hide();
+    }
+});
+
+$(function(){
+      $("#svgClick").click(function() {
+          $(".mini-menu ul").toggle();
+      });
+});
+
+
+//Smooth Scroll Function
 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
