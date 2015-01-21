@@ -39,20 +39,21 @@ $(function(){
 //Extra Menu Fade In/Out
 
 $(window).scroll(function() {
-    if ($(window).scrollTop() > 48) {
+    if ($(window).scrollTop() > 600) {
         $('.mini-menu').fadeIn();
     }
     else {
-        $('.mini-menu').hide();
+        $('.mini-menu').fadeOut();
     }
 });
 
+/*
 $(function(){
       $("#svgClick").click(function() {
           $(".mini-menu ul").toggle();
       });
 });
-
+*/
 
 //Smooth Scroll Function
 
