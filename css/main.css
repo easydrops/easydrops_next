@@ -1,7 +1,4 @@
-@font-face {
-    font-family: msyi;
-    src: url('../fonts/msyi.ttf');
-}
+/* General Settings */
 
 body {
   font-family: msyi;
@@ -12,6 +9,26 @@ a {
   text-decoration: none;
   color: #000;
 }
+
+nav {
+  font-size: 20px;
+  background: black;
+  width: 100%;
+  color: white;
+}
+
+ul {
+  margin: 0;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  padding: 0 2rem;
+}
+
 footer a, header a {
   color: #fff;
 }
@@ -20,6 +37,25 @@ footer a:hover, header a:hover {
   color: #bbb;
 }
 
+/* Extra Nav-Menu */
+
+.mini-menu {
+  text-align: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  top: 0;
+  padding: 0.5em 0;
+}
+
+.mini-menu ul {
+  display: inline;
+  width: 100%;
+}
+
+.mini-menu ul li img {
+  vertical-align: middle;
+}
 
 section.start {
   text-align: center;
@@ -50,69 +86,6 @@ section.start h1 {
     margin: 40% auto auto;
   }
 } /* min-width 1025px, large screens */
-
-nav {
-  font-size: 20px;
-  background: black;
-  width: 100%;
-  color: white;
-}
-
-ul {
-  margin: 0;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-li {
-  display: inline-block;
-  list-style: none;
-  padding: 0 2rem;
-}
-
-/* Extra Menu */
-
-.mini-menu {
-  text-align: center;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  top: 0;
-  padding: 0.5em 0;
-}
-
-.mini-menu ul {
-  display: inline;
-  width: 100%;
-}
-
-.mini-menu ul li img {
-  vertical-align: middle;
-}
-
-.mini-menu ul .peter {
-
-}
-
-
-/*
-.mini-menu ul {
-  margin-top: 0.75rem;
-  padding-top: 0;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.mini-menu ul li {
-  display: block;
-  padding: 0 0.5rem 0 0.5rem;
-  text-align: center;
-}
-*/
-
-
-/**------------**/
-
 
 .container {
   text-align: center;
@@ -145,7 +118,6 @@ section.parallax article {
   section.parallax article {
     padding: 0 2rem;
   }
-
 }
 
 @media only screen and (min-width: 40.063em) {
@@ -158,25 +130,6 @@ section.parallax article {
     max-width: 100px;
   }
 }
-
-.set {
-  width: 100%;
-  text-align: center;
-}
-
-.image_wrapper {
- max-width: 100% !important;
-} 
-
-.img_set {
-  display: inline-block;
-  width: 30%
-}
-
-.b_img {
-  height: 150px;
-}
-
 
 .invisible_out {
   opacity: 1;

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: msyi;
+    src: url('../fonts/msyi/msyi-webfont.ttf'),
+       url('msyi-webfont.woff2') format('woff2'),
+       url('msyi-webfont.woff') format('woff'),
+       url('msyi-webfont.ttf')  format('truetype'),
+       url('msyi-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: bubble;
+    src: url('../fonts/bubbelo/bubbelo.ttf'),
+       url('bubbelo-webfont.woff2') format('woff2'),
+       url('bubbelo-webfont.woff') format('woff'),
+       url('bubbelo-webfont.ttf')  format('truetype'),
+       url('bubbelo-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: choc;
+    src: url('../fonts/choc/choc.otf'),
+       url('bubbelo-webfont.woff2') format('woff2'),
+       url('bubbelo-webfont.woff') format('woff'),
+       url('bubbelo-webfont.ttf')  format('truetype'),
+       url('bubbelo-webfont.svg#svgFontName') format('svg');
+}
