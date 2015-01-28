@@ -19,10 +19,10 @@ $(window).on('scroll', function(){
 });
 
 //Fade In Function
-
+/*
 $(function(){
-    var fadeBegin = 100, 
-    fadeFinish = 300, 
+    var fadeBegin = $(window).scrollTop(), 
+    fadeFinish = $(window).scrollTop() + 60, 
     fadingElement = $('.invisible_in');
 
   $(window).on('scroll', function(){
@@ -35,8 +35,86 @@ $(function(){
     fadingElement.stop().animate({opacity: opacity}, 100);
   });
 });
+*/
 
 
+$(function(){
+    var scrollTop     = $(window).scrollTop(),
+        elementOffset = $('.invisible_in').offset().top,
+        fadingElement = $('.invisible_in'),
+        distance      = (elementOffset - scrollTop);
+
+  $(window).on('scroll', function(){
+      var opacity = 1;
+
+    if( fadingElement.distance > scrollTop ){
+        opacity = 0; 
+    }
+    else {
+        opacity = 1;
+    }
+    fadingElement.stop().animate({opacity: opacity}, 100);
+  });
+});
+
+// Image Show
+
+$(document).ready(function() {
+  var rotate = function() {
+    $("section.start")
+      .delay(4000).queue(function() {
+          $(this).css({
+              "background": "url('./images/slider/bg_skater_opt.jpg') no-repeat center center fixed",
+              "-webkit-background-size" : "cover",
+              "-moz-background-size" : "cover",
+              "-o-background-size" : "cover",
+              "background-size" : "cover",
+              "transition" : "background 0.5s linear",
+              "color" : "rgba(255,255,255,0.8)"
+          });
+          $(this).dequeue();
+      })
+      .delay(4000).queue(function() {
+          $(this).css({
+              "background": "url('./images/slider/bg_bear_opt.jpg') no-repeat center center fixed",
+              "-webkit-background-size" : "cover",
+              "-moz-background-size" : "cover",
+              "-o-background-size" : "cover",
+              "background-size" : "cover",
+              "transition" : "background 0.5s linear",
+              "color" : "rgba(0,0,0,0.8)"
+          });
+          $(this).dequeue();
+      })
+      .delay(4000).queue(function() {
+          $(this).css({
+              "background": "url('./images/slider/bg_city_opt.jpg') no-repeat center center fixed",
+              "-webkit-background-size" : "cover",
+              "-moz-background-size" : "cover",
+              "-o-background-size" : "cover",
+              "background-size" : "cover",
+              "transition" : "background 0.5s linear",
+              "color" : "rgba(255,255,255,0.8)"
+          });
+          $(this).dequeue();
+      })
+      .delay(4000).queue(function(next) {
+          $(this).css({
+              "background": "url('./images/slider/bg_forest_opt.jpg') no-repeat center center fixed",
+              "-webkit-background-size" : "cover",
+              "-moz-background-size" : "cover",
+              "-o-background-size" : "cover",
+              "background-size" : "cover",
+              "transition" : "background 0.5s linear",
+              "color" : "rgba(255,255,255,0.8)"
+          });
+          $(this).dequeue();
+          next();
+      })
+      .queue(rotate);
+  };
+  rotate();
+});
 
 //Extra Menu Fade In/Out
 /*
@@ -59,6 +137,8 @@ $(window).scroll(function() {
         $('.mini-menu').fadeOut();
     }
 });
+
+//Box Slider Activation
 
 
 

@@ -9,18 +9,27 @@
 
 @font-face {
     font-family: bubble;
-    src: url('../fonts/bubbelo/bubbelo.ttf'),
-       url('bubbelo-webfont.woff2') format('woff2'),
-       url('bubbelo-webfont.woff') format('woff'),
-       url('bubbelo-webfont.ttf')  format('truetype'),
-       url('bubbelo-webfont.svg#svgFontName') format('svg');
+    src: url('../fonts/bubbleo/bubbleo-webfont.ttf'),
+       url('bubbleo-webfont.woff2') format('woff2'),
+       url('bubbleo-webfont.woff') format('woff'),
+       url('bubbleo-webfont.ttf')  format('truetype'),
+       url('bubbleo-webfont.svg#svgFontName') format('svg');
 }
 
 @font-face {
     font-family: choc;
-    src: url('../fonts/choc/choc.otf'),
-       url('bubbelo-webfont.woff2') format('woff2'),
-       url('bubbelo-webfont.woff') format('woff'),
-       url('bubbelo-webfont.ttf')  format('truetype'),
-       url('bubbelo-webfont.svg#svgFontName') format('svg');
+    src: url('../fonts/choc/choc-webfont.ttf'),
+       url('choc-webfont.woff2') format('woff2'),
+       url('choc-webfont.woff') format('woff'),
+       url('choc-webfont.ttf')  format('truetype'),
+       url('choc-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: znikomit;
+    src: url('../fonts/znikomit/znikomit-webfont.ttf'),
+       url('znikomit-webfont.woff2') format('woff2'),
+       url('znikomit-webfont.woff') format('woff'),
+       url('znikomit-webfont.ttf')  format('truetype'),
+       url('znikomit-webfont.svg#svgFontName') format('svg');
 }

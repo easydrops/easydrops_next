@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+h2 {
+  margin-top: 0;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -57,10 +61,15 @@ footer a:hover, header a:hover {
   vertical-align: middle;
 }
 
+section {
+  padding: 2em 0;
+}
+
 section.start {
+  margin-top: 0;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  background: url("../images/bg_forrest_opt.jpg") no-repeat center center fixed; 
+  background: url("../images/slider/bg_forest_opt.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -69,20 +78,22 @@ section.start {
 
 @media only screen and (max-width: 40em) {
   section.start h1 {
-    font-size: 4rem;
+    font-family: msyi;
+    line-height: 10px;
+    font-size: 3rem;
     margin: 50% auto auto;
   }
 }
 
 @media only screen and (min-width: 40.063em) {
   section.start h1 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 } /* min-width 641px, medium screens */
 
 @media only screen and (min-width: 64.063em) {
 section.start h1 {
-    font-size: 7rem;
+    font-size: 6rem;
     margin: 40% auto auto;
   }
 } /* min-width 1025px, large screens */
@@ -94,13 +105,14 @@ section.start h1 {
   height: 500px;
 }
 
-section.parallax article {
-  height: 300px !important;
+section article {
+  min-height: 300px;
   color: #000;
   font-size: 16px;
   text-align: center;
   display: block;
   padding: 0 2rem;
+  margin: 2rem 0;
 }
 
 @media only screen and (max-width: 40em) {
@@ -112,11 +124,10 @@ section.parallax article {
     float: none;
   }
   .heart {
-    max-width: 10%;
+    max-width: 10% !important;
     min-width: 60px;
-  }
-  section.parallax article {
-    padding: 0 2rem;
+    padding: 0 0;
+    display: inline !important;
   }
 }
 
@@ -124,41 +135,33 @@ section.parallax article {
   .logo {
     max-width: 5%;
     min-width: 30px;
-    padding: 2rem;
+    padding: 0;
   }
   .heart {
-    max-width: 100px;
+    max-width: 100px !important;
+    display: inline !important;
+  }
+  section article {
+    padding: 0 6rem;
   }
 }
 
-.invisible_out {
-  opacity: 1;
-}
-
-.invisible_in {
-  opacity: 1;
-}
-
-section.parallax {
-  color: rgba(0, 0, 0, 0.8);
-  margin: 0;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+section.wrapper {
   text-align: center;
-}
-
-section.parallax h1 {
-  text-align: center;
-  font-family: msyi;
 }
 
 section div.container {
   display: inline-block;
 }
 
-section.parallax.parallax_2 {
-  height: 200px !important;
+.poem {
+  font-family: 'znikomit';
+  font-weight: bold;
+  margin: 0 auto;
 }
+.bxslider li article {
+  overflow:scroll;
+  overflow-x:hidden;
+}
+
 

@@ -4,17 +4,19 @@
     <title>The Page</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/main.css"> <!--BoxSlider CSS -->
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> <!--JQUERY Libary -->
+    <script src="js/jquery.bxslider.js"></script>  <!--BoxSlider JS -->
     <script type="text/javascript" src="js/stuff.js"></script>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="#slideAbout">About</a></li>
-          <li><a href="#slidePassion">Passion</a></li>
-          <li><a href="#slideArt">Art</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Passion">Passion</a></li>
+          <li><a href="#Art">Art</a></li>
         </ul>
       </nav>
     </header>
@@ -22,23 +24,23 @@
     <header>
       <nav class="mini-menu">
         <ul>
-          <li><img id="svgClick" src="images/menu.svg"></li>
-          <li class="peter"><a href="#slideAbout">About</a></li>
-          <li><a href="#slidePassion">Passion</a></li>
-          <li><a href="#slideArt">Art</a></li>
+          <li><img src="images/menu.svg"></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Passion">Passion</a></li>
+          <li><a href="#Art">Art</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
 
-      <section id="slide_one" class="start">
+      <section class="start">
           <div class="container invisible_out">
               <h1>easydrops</h1>
           </div>
       </section>
 
-      <section id="slideAbout" class="parallax">
+      <section id="About" class="wrapper">
           <img class="logo" src="images/jh.svg">
           <article>
               <h2>About</h2>
@@ -46,38 +48,57 @@
           </article>
       </section>
 
-      <section id="slide_two" class="parallax parallax_2">
-          <div class="container invisible_in">
-            <img class="heart" src="images/music.svg">
-            <img class="heart" src="images/text.svg">
-          </div>
-      </section>
-
-      <section id="slidePassion" class="parallax">
-        <img class="logo" src="images/heart.svg">
+      <section id="Passion" class="wrapper">
           <article>
+              <img class="logo" src="images/heart.svg">
               <h2>Passion</h2>
               <p>Wo soll ich anfangen? Ich liebe Musik! Ich spielte bis vor zwei Jahren mit ein paar sehr guten Freunden in einer Band... Worte mag ich auch sehr. Und Film... ein viel zu unterschätzes Medium in dieser Konsumgesellschaft. Ich mag Skateboards... auch wenn ich noch ziemlich schlecht bin. Ahja Badminton und Frisbee sind auch cool... ja ja so vieles das ich mag... dazu gehören übrigens auch diese drei "...". Ich könnte noch so viel mehr aufzählen.
               </p>
           </article>
       </section>
 
-      <section id="imageSlider" class="set">
-              <img src="images/dropssymbol_adv.jpg" >
-              <img src="images/set_alpha_1.jpg">
-      </section>
-
-      <section id="slideArt" class="parallax">
+      <section id="Art" class="wrapper plus">
           <article>
+              <img class="heart" src="images/lightbulb.svg">
               <h2>Art</h2>
               <p>Nun ja. Künstler? Ich versuche mein bestes auf allen möglichen Gebieten: Musik, Gedichte, Zeichnungen, Webseiten, Film, Animation, Graphikdesign. Schwer zu sagen wo ich letztendlich eigentlich gut drin bin. Aber das ist vielliecht auch gar nicht soo wichtig. Es ist schön ein bisschen von allem zu machen. Aber ja, Bewegtbild ist oft faszinierend.</p>
           </article>
-          <article>
-            <iframe class="sc-widget" width="70%" height="112" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170500122&amp;color=d2622b&amp;auto_play=false&amp;show_artwork=false"></iframe>
-          </article>
+
+          <ul class="bxslider">
+              <li>
+                <article>
+                  <img class="heart invisible_in" src="images/music.svg">
+                  <h2>Music</h2>
+                  <iframe class="sc-widget" width="70%" height="112" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170500122&amp;color=d2622b&amp;auto_play=false&amp;show_artwork=false"></iframe>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <img class="heart invisible_in" src="images/text.svg">
+                  <h2>Poetry</h2>
+                  <div class="poem">
+                    <p>In shadows we breath<br>
+                      we laugh in lies,<br>
+                      still loneliness seeks<br>
+                      compassionate eyes.<br>
+                      <br>
+                      Without any thought, for anyone<br>
+                      we expect to be worth something under this sun.<br>
+                      <br>
+                      Guarding our denying minds,<br>
+                      in freedom we chose the ways that blind.<br>
+
+                      Though longing for a deeper sense<br>
+                      we forget the love we lived.<br>
+                      we lose ourselves in our pretense<br>
+                      and take but do not give.</p>
+                  <div>
+                </article>
+              </li>
+          </ul>
       </section>
 
-      <section id="slideKontakt" class="parallax">
+      <section id="Kontakt" class="wrapper">
           <article>
               <h2>Kontakt</h2>
               <p>Vielleicht willst du ja mehr über mich wissen? Wenn du willst kannst du mich hier erreichen:</p>
