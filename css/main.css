@@ -76,27 +76,11 @@ section.start {
   background-size: cover;
 }
 
-@media only screen and (max-width: 40em) {
-  section.start h1 {
-    font-family: msyi;
-    line-height: 10px;
-    font-size: 3rem;
-    margin: 50% auto auto;
-  }
+
+section.start div img {
+    padding-top: 20px;
+    margin: 25% auto auto;
 }
-
-@media only screen and (min-width: 40.063em) {
-  section.start h1 {
-    font-size: 5rem;
-  }
-} /* min-width 641px, medium screens */
-
-@media only screen and (min-width: 64.063em) {
-section.start h1 {
-    font-size: 6rem;
-    margin: 40% auto auto;
-  }
-} /* min-width 1025px, large screens */
 
 .container {
   text-align: center;
@@ -160,7 +144,7 @@ section div.container {
   margin: 0 auto;
 }
 .bxslider li article {
-  overflow:scroll;
+  overflow: auto;
   overflow-x:hidden;
 }
 

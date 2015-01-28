@@ -116,17 +116,32 @@ $(document).ready(function() {
   rotate();
 });
 
-//Extra Menu Fade In/Out
-/*
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 600) {
-        $('.mini-menu').fadeIn();
-    }
-    else {
-        $('.mini-menu').fadeOut();
-    }
+$(document).ready(function() {
+  var rotate = function() {
+    $('#myDrops')
+      .delay(4000).queue(function() {
+          $('#myDrops').attr('src','images/betterdrops_white.svg');
+          $(this).dequeue();
+      })
+      .delay(4000).queue(function() {
+          $('#myDrops').attr('src','images/betterdrops_black.svg');
+          $(this).dequeue();
+      })
+      .delay(4000).queue(function() {
+          $('#myDrops').attr('src','images/betterdrops_white.svg');
+          $(this).dequeue();
+      })
+      .delay(4000).queue(function(next) {
+          $('#myDrops').attr('src','images/betterdrops_white.svg');
+          $(this).dequeue();
+          next();
+      })
+      .queue(rotate);
+  };
+  rotate();
 });
-*/
+
+
 
 $(window).scroll(function() {
   var st = $(this).scrollTop();
