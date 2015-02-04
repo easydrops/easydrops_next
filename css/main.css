@@ -32,6 +32,10 @@ li {
   list-style: none;
   padding: 0 2rem;
 }
+footer {
+  top: -30px;
+  position: relative;
+}
 
 footer a, header a {
   color: #fff;
@@ -50,6 +54,7 @@ footer a:hover, header a:hover {
   width: 100%;
   top: 0;
   padding: 0.5em 0;
+  z-index: 100;
 }
 
 .mini-menu ul {
@@ -62,7 +67,15 @@ footer a:hover, header a:hover {
 }
 
 section {
-  padding: 2em 0;
+  padding-top: 2em;
+
+  -webkit-box-shadow: inset 0px 6px 3px 1px rgba(0,0,0,0.10);
+  -moz-box-shadow: inset 0px 4px 6px 1px rgba(0,0,0,0.10);
+  box-shadow: inset 0px 4px 6px 1px rgba(0,0,0,0.10);
+}
+
+section#About {
+  padding-top: 2em;
 }
 
 section.start {
@@ -92,7 +105,7 @@ section.start div img {
 section article {
   min-height: 300px;
   color: #000;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   display: block;
   padding: 0 2rem;
@@ -138,14 +151,64 @@ section div.container {
   display: inline-block;
 }
 
+.music iframe {
+  padding-bottom: 5em;
+}
+
 .poem {
   font-family: 'znikomit';
   font-weight: bold;
   margin: 0 auto;
 }
 .bxslider li article {
+  text-align: center;
   overflow: auto;
   overflow-x:hidden;
 }
 
+.bxslider li article h2 {
+  margin-top: 1em;
+}
 
+.bxslider li article img {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.bx-pager {
+  padding-top: 0;
+}
+
+.box-wrapper {
+  -moz-box-shadow: 0;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+  border: 0;
+  background: #fff;
+}
+.adjust {
+  margin-top: 25%;
+}
+
+#myDrops {
+  position: absolute;
+}
+
+#myDropsDown {
+  opacity: 0 !important;
+  z-index: 0;
+}
+
+.cut {
+  margin: 0 auto;
+  overflow: hidden;
+  height: 469px;
+  position: relative;
+  top: -75px;
+}
+.block {
+  z-index: 10;
+  background-color: white;
+  height: 75px;
+  position: relative;
+}

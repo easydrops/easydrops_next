@@ -168,3 +168,6 @@ section.parallax.parallax_2 {
   height: 200px !important;
 }
 
+iframe.buttons-options {
+  display: none !important;
+}

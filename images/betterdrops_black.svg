@@ -1,8 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Ebene_1" x="0px" y="0px" width="119.416px" height="119.416px" viewBox="0 0 119.416 119.416" enable-background="new 0 0 119.416 119.416" xml:space="preserve">
+<defs>
+  <style type="text/css"><![CDATA[
+		@font-face {
+		    font-family: msyi;
+		    src: url('../fonts/msyi/msyi-webfont.ttf') format("truetype");
+		    }
+		}]]>
+  </style>
+</defs>
 <g>
 	<path d="M63.864 43.616l-4.153-6.847l-4.395 7.213h0.001c-0.439 0.752-0.695 1.624-0.695 2.557c0 2.8 2.3 5.1 5.1 5.1 c2.809 0 5.086-2.277 5.086-5.086C64.793 45.5 64.4 44.4 63.9 43.616z"/>
 </g>
-<text transform="matrix(1 0 0 1 28.8311 67.6816)" font-family="'Microsoft-Yi-Baiti'" font-size="17.7345">easydrops</text>
+<text transform="matrix(1 0 0 1 28.8311 67.6816)" font-family="'msyi'" font-size="17.7345">easydrops</text>
 <g>
 	<path d="M74.257 46.038l36.216-36.216l-0.725-0.724L73.536 45.31C73.782 45.5 74 45.8 74.3 46.038z"/>
 	<path d="M45.31 73.536l-33.071 33.071l-6.12 1.716l-0.534 1.516l4.754-1.334l-3.684 3.685l-6.122 1.719L0 115.426l5.774-1.621 l-1.451 5.481l1.522-0.56l1.543-5.821l3.71-3.71l-1.192 4.506l1.525-0.561l1.539-5.817l33.068-33.067 C45.789 74 45.5 73.8 45.3 73.536z"/>

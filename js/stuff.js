@@ -62,7 +62,7 @@ $(function(){
 $(document).ready(function() {
   var rotate = function() {
     $("section.start")
-      .delay(4000).queue(function() {
+      .delay(5000).queue(function() {
           $(this).css({
               "background": "url('./images/slider/bg_skater_opt.jpg') no-repeat center center fixed",
               "-webkit-background-size" : "cover",
@@ -74,7 +74,7 @@ $(document).ready(function() {
           });
           $(this).dequeue();
       })
-      .delay(4000).queue(function() {
+      .delay(5000).queue(function() {
           $(this).css({
               "background": "url('./images/slider/bg_bear_opt.jpg') no-repeat center center fixed",
               "-webkit-background-size" : "cover",
@@ -86,7 +86,7 @@ $(document).ready(function() {
           });
           $(this).dequeue();
       })
-      .delay(4000).queue(function() {
+      .delay(5000).queue(function() {
           $(this).css({
               "background": "url('./images/slider/bg_city_opt.jpg') no-repeat center center fixed",
               "-webkit-background-size" : "cover",
@@ -98,7 +98,7 @@ $(document).ready(function() {
           });
           $(this).dequeue();
       })
-      .delay(4000).queue(function(next) {
+      .delay(5000).queue(function(next) {
           $(this).css({
               "background": "url('./images/slider/bg_forest_opt.jpg') no-repeat center center fixed",
               "-webkit-background-size" : "cover",
@@ -116,45 +116,26 @@ $(document).ready(function() {
   rotate();
 });
 
+//Sub Menu Function
+
+    //Deactivate for the start
 $(document).ready(function() {
-  var rotate = function() {
-    $('#myDrops')
-      .delay(4000).queue(function() {
-          $('#myDrops').attr('src','images/betterdrops_white.svg');
-          $(this).dequeue();
-      })
-      .delay(4000).queue(function() {
-          $('#myDrops').attr('src','images/betterdrops_black.svg');
-          $(this).dequeue();
-      })
-      .delay(4000).queue(function() {
-          $('#myDrops').attr('src','images/betterdrops_white.svg');
-          $(this).dequeue();
-      })
-      .delay(4000).queue(function(next) {
-          $('#myDrops').attr('src','images/betterdrops_white.svg');
-          $(this).dequeue();
-          next();
-      })
-      .queue(rotate);
-  };
-  rotate();
+        $('.mini-menu').hide();
 });
 
-
-
+    //Begin on scroll
 $(window).scroll(function() {
   var st = $(this).scrollTop();
-    if(st + $(window).height() > $(document).height() - st) {
+    if(st > 850) {
         $('.mini-menu').fadeIn();
+    }
+    else if(st < 850) {
+        $('.mini-menu').fadeOut();
     }
     else {
         $('.mini-menu').fadeOut();
     }
 });
-
-//Box Slider Activation
-
 
 
 //Smooth Scroll Function
