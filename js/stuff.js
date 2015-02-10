@@ -37,7 +37,6 @@ $(function(){
 });
 */
 
-
 $(function(){
     var scrollTop     = $(window).scrollTop(),
         elementOffset = $('.invisible_in').offset().top,
@@ -58,6 +57,13 @@ $(function(){
 });
 
 // Image Show
+
+$(document).ready(function() {
+  var windowHeight = $(window).height();
+        $('.container').css({
+              "height": windowHeight
+          });
+});
 
 $(document).ready(function() {
   var rotate = function() {
@@ -153,4 +159,35 @@ $(function() {
       }
     }
   });
+});
+
+
+
+// svg fun
+
+var flagscroll=true;
+
+$(window).scroll(function() {
+  var elementOffset = $('.note, .skate').offset().top - $(window).height()/2;
+  var path = document.querySelector('.note path, .skate path');
+  var length = path.getTotalLength();
+  var st = $(this).scrollTop(); 
+    if(st > elementOffset && flagscroll==true) {
+    $('.note, .skate').css({"opacity": "1"});
+    // Clear any previous transition
+    path.style.transition = path.style.WebkitTransition =
+      'none';
+    // Set up the starting positions
+    path.style.strokeDasharray = length + ' ' + length;
+    path.style.strokeDashoffset = length;
+    // Trigger a layout so styles are calculated & the browser
+    // picks up the starting position before animating
+    path.getBoundingClientRect();
+    // Define our transition
+    path.style.transition = path.style.WebkitTransition =
+      'stroke-dashoffset 2s ease-in-out';
+    // Go!
+    path.style.strokeDashoffset = '0';
+    flagscroll=false;
+    }
 });

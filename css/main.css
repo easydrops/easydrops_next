@@ -24,12 +24,17 @@ nav {
   background: black;
   width: 100%;
   color: white;
+  z-index: 100;
+  top: 0;
 }
 
 ul {
   margin: 0;
   text-align: center;
-  padding: 1rem 0;
+  font-size: 22px;
+  width: 100%;
+  padding: 0.5em 0;
+  height: 1.5em;
 }
 
 li {
@@ -45,6 +50,9 @@ footer a, header a {
 footer a:hover, header a:hover {
   color: #bbb;
 }
+#Kontakt article {
+  margin-bottom: 0;
+}
 
 /* Extra Nav-Menu */
 
@@ -53,30 +61,48 @@ footer a:hover, header a:hover {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
-  top: 0;
-  padding: 0.5em 0;
-  z-index: 100;
 }
 
-.mini-menu ul {
-  display: inline;
-  width: 100%;
+
+.svgdrop {
+  background: url(../images/drops.svg) no-repeat;
+  background-size: 20px 30px;
+  width: 20px;
+  height: 35px;
+  position: absolute;
+  top: 2%;
+  left: 4%;
+}
+.svgdrop:hover {
+  background: url(../images/drops2.svg) no-repeat;
+  background-size: 20px 30px;
+  width: 20px;
+  height: 35px;
+  position: absolute;
+  top: 2%;
+  left: 4%;
 }
 
-.mini-menu ul li img {
-  vertical-align: middle;
+.mini-menu .svgdrop {
+  top: 25%;
+  left: 4%;
 }
 
 section {
   padding-top: 2em;
-
   -webkit-box-shadow: inset 0px 6px 3px 1px rgba(0,0,0,0.10);
   -moz-box-shadow: inset 0px 4px 6px 1px rgba(0,0,0,0.10);
   box-shadow: inset 0px 4px 6px 1px rgba(0,0,0,0.10);
 }
 
-section#About {
-  padding-top: 2em;
+section article {
+  min-height: 300px;
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  padding: 0 2rem;
+  margin: 2rem 0;
 }
 
 section.start {
@@ -90,29 +116,26 @@ section.start {
   background-size: cover;
 }
 
+section.start object {
+  width: 80%;
+  height: 55%;
+}
 
-section.start div img {
-    padding-top: 20px;
-    margin: 25% auto auto;
+
+section#About {
+  padding-top: 2em;
+}
+
+section#Passion {
+  height: 600px;
 }
 
 .container {
   text-align: center;
   max-width: 960px;
   margin: 0 auto;
-  height: 500px;
-}
-
-section article {
-  min-height: 300px;
-  color: #000;
-  font-size: 18px;
-  text-align: center;
-  display: block;
-  padding: 0 2rem;
-  margin: 2rem 0;
-    background: url(../images/lined_paper.jpg) center;
-  background-size: 30%;
+  height: 100%;
+  z-index: 0;
 }
 
 @media only screen and (max-width: 40em) {
@@ -189,17 +212,12 @@ section div.container {
   border: 0;
   background: #fff;
 }
+
 .adjust {
-  margin-top: 25%;
-}
-
-#myDrops {
   position: absolute;
-}
-
-#myDropsDown {
-  opacity: 0 !important;
-  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* add browser-prefixes */
 }
 
 .cut {
@@ -215,4 +233,26 @@ section div.container {
   background-size: 30%;
   height: 75px;
   position: relative;
+  right: 20%;
+  width: 136%;
 }
+
+/* SVG Objects */
+.note {
+  opacity: 0;
+  position: absolute;
+  margin-top: 2100px;
+  margin-left: 10%;
+}
+
+.skate {
+  opacity: 0;
+  position: absolute;
+  margin-top: 2050px;
+  margin-left: 60%;
+}
+
+.hide {
+  opacity: 0;
+}
+
