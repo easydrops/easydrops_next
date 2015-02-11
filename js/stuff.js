@@ -18,45 +18,13 @@ $(window).on('scroll', function(){
   });
 });
 
-//Fade In Function
-/*
-$(function(){
-    var fadeBegin = $(window).scrollTop(), 
-    fadeFinish = $(window).scrollTop() + 60, 
-    fadingElement = $('.invisible_in');
-
-  $(window).on('scroll', function(){
-    var offset = $(document).scrollTop(), opacity = 1;
-    if( offset <= fadeBegin ){
-        opacity = 0; 
-    } else if( offset <= fadeFinish ){
-        opacity = 0 - offset / fadeFinish;
-    }
-    fadingElement.stop().animate({opacity: opacity}, 100);
-  });
-});
-*/
-
-$(function(){
-    var scrollTop     = $(window).scrollTop(),
-        elementOffset = $('.invisible_in').offset().top,
-        fadingElement = $('.invisible_in'),
-        distance      = (elementOffset - scrollTop);
-
-  $(window).on('scroll', function(){
-      var opacity = 1;
-
-    if( fadingElement.distance > scrollTop ){
-        opacity = 0; 
-    }
-    else {
-        opacity = 1;
-    }
-    fadingElement.stop().animate({opacity: opacity}, 100);
-  });
-});
 
 // Image Show
+  $(document).ready(function() {
+    $(".fancybox").fancybox();
+  });
+
+
 
 $(document).ready(function() {
   var windowHeight = $(window).height();
@@ -161,33 +129,3 @@ $(function() {
   });
 });
 
-
-
-// svg fun
-
-var flagscroll=true;
-
-$(window).scroll(function() {
-  var elementOffset = $('.note, .skate').offset().top - $(window).height()/2;
-  var path = document.querySelector('.note path, .skate path');
-  var length = path.getTotalLength();
-  var st = $(this).scrollTop(); 
-    if(st > elementOffset && flagscroll==true) {
-    $('.note, .skate').css({"opacity": "1"});
-    // Clear any previous transition
-    path.style.transition = path.style.WebkitTransition =
-      'none';
-    // Set up the starting positions
-    path.style.strokeDasharray = length + ' ' + length;
-    path.style.strokeDashoffset = length;
-    // Trigger a layout so styles are calculated & the browser
-    // picks up the starting position before animating
-    path.getBoundingClientRect();
-    // Define our transition
-    path.style.transition = path.style.WebkitTransition =
-      'stroke-dashoffset 2s ease-in-out';
-    // Go!
-    path.style.strokeDashoffset = '0';
-    flagscroll=false;
-    }
-});
